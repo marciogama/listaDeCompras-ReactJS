@@ -1,0 +1,58 @@
+1) Criar a pasta 'backend'
+2) Abrir o terminar e entrar nessa pasta 'backend'
+   Dentro dessa pasta digito:
+	npm init -y (enter) (vai criar o arquivo package.json
+3) Depois instalo a dependência do Json Server
+	npm i --save json-server@0.13.0 -E
+4) Dentro da pasta backend crio o arquivo db.json com a seguinte estrutura:
+
+	{
+	    "produtos":[{
+	            "id": 1,
+	            "nome": "Azeite",
+	            "quantidade": 1,
+	            "precoUnitario": 14.99
+	        }, {
+	            "id": 2,
+	            "nome": "Óleo de Soja",
+	            "quantidade": 2,
+	            "precoUnitario": 7.99
+	        }]
+	}
+
+5) Edito o arquivo package.json e troco a linha:
+
+	"scripts": {
+    	  "test": "echo \"Error: no test specified\" && exit 1"
+	},
+
+	por 
+
+	"scripts": {
+    	  "start": "json-server --watch db.json --port 3001"
+	},
+
+6) Depois digito:
+
+	npm start (enter)
+
+   Com isso, o meu backend já está funcionando.
+
+7) Criando o FrontEnd
+
+  	Abro um novo terminal e dentro da pasta 'React_Crud' digito:
+
+	create-react-app frontend (enter)
+
+8) Depois da aplicação criada, vamos colocar algumas dependências dentro do arquivo package.json
+	a) axios - requisição http
+		"axios": "0.18.0",
+	b) bootstrap - css mais fácil
+		"bootstrap": "4.1.1",
+	c) font-awesome - fonte (biblioteca) de icones
+		"font-awesome": "4.7.0",
+	d) react-router - para poder navegar entre os componentes
+		"react-router": "4.2.0",
+	e) react-router-dom - complementando o anterior
+		"react-router-dom": "4.2.2",
+	
